@@ -26,7 +26,7 @@
             {{-- <a href='/posts/{{$post->id}}' class="btn btn-info">View</a> --}}
             <a href={{route('posts.show',['post'=>$post->id])}} class="btn btn-info">View</a>
             <a href={{route('posts.edit',['post'=>$post->id])}} class="btn btn-warning">Edit</a>
-            <form method="post" action="{{route('photos.destroy',['post'=>$post->id])}}" class="d-inline">
+            <form method="post" action="{{route('posts.destroy',['post'=>$post->id])}}" class="d-inline">
             @csrf
             @method('DELETE')
                 <button type="submit" class="btn btn-danger" id="deletebtn" onclick="return confirm('Are you sure to delete ?')">Delete</button>
